@@ -1,0 +1,6 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": ["client", "server"],
+  "prettier.prettierPath": "./node_modules/prettier"
+}
