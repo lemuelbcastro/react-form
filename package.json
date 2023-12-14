@@ -7,6 +7,7 @@
     "dev": "concurrently -c \"auto\" --n \"Server,Client\" \"npm run dev -w server\" \"npm run dev -w client\"",
     "dev:client": "npm run dev -w client",
     "dev:server": "npm run dev -w server",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +20,7 @@
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
     "husky": "^8.0.3"
   }
 }
