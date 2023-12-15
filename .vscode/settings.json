@@ -1,6 +1,13 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "eslint.workingDirectories": ["client", "server"],
-  "prettier.prettierPath": "./node_modules/prettier"
+  "eslint.workingDirectories": [
+    "client",
+    "server",
+    "common"
+  ],
+  "prettier.prettierPath": "./node_modules/prettier",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
