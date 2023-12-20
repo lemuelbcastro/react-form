@@ -26,7 +26,7 @@ router.get('/users/:id', async (req, res) => {
 })
 
 router.post('/users', async (req, res) => {
-  const body = userSchema.safeParse(req.body)
+  const body = userSchema.omit({ id: true }).safeParse(req.body)
 
   if (!body.success) {
     res.status(422).json(body.error.issues)
@@ -45,7 +45,7 @@ router.post('/users', async (req, res) => {
 
 router.put('/users/:id', async (req, res) => {
   const { id } = req.params
-  const body = userSchema.safeParse({ id, ...req.body })
+  const body = userSchema.omit({ id: true }).safeParse({ id, ...req.body })
 
   if (!body.success) {
     res.status(422).json(body.error.issues)
