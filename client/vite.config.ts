@@ -13,5 +13,13 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    coverage: {
+      all: true,
+      include: ['src/**'],
+      provider: 'istanbul',
+      reportsDirectory: './html/coverage',
+      reporter: ['text', ['html', { subdir: 'coverage' }]],
+    },
+    reporters: ['default', 'html'],
   },
 })
