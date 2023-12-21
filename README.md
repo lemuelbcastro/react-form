@@ -10,6 +10,14 @@ Navigate to the root directory and run:
 npm install
 ```
 
+Run the [Prisma](https://www.prisma.io/) migration:
+
+```bash
+cd server
+cp .env.example .env
+npx prisma migrate dev
+```
+
 ## Scripts
 
 ### `npm run dev`
